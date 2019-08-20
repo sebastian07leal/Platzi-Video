@@ -2,31 +2,84 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <title>Platzi Video</title>
 </head>
 <style>
     body {
         margin: 0;
+        background-color: #AB88FF; 
+        font-family: 'Muli', sans-serif;
     }
-
-    header {
-        background-color: #21C08B;
+    .header {
+        background-color: #AB88FF;
         width: 100%;
         height: 80px;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
     }
-
-    header img {
+    .header__img {
         width: 200px;
-        height: 50px;
         margin-top: 10px;
         margin-left: 10px;
     }
-
-
+    .header__menu {
+        margin-right: 30px;
+    }
+    .header__menu ul {
+        display: none;  /*Desactiva la visibilidad del objeto*/
+        list-style: none; /*Quita las decoraciones por defecto*/
+        padding: 0px; /*Quita el diplay por defecto que tiene las listas*/
+        position: absolute; 
+        width: 100px; 
+        text-align: right;
+        margin: 0px 0px 0px -14px;
+    }
+    .header__menu:hover ul, ul:hover {
+        display: block; 
+    }
+    .header__menu li {
+        margin: 10px 0px; 
+    }
+    .header__menu li a {
+        color: white;
+        text-decoration: none; /*Quita la decoracion que tienen las lineas por defecto*/
+        
+    }
+    .header__menu li a:hover {
+        text-decoration: underline;
+    }
+    .header__menu--profile {    /*El problema estaba aca*/
+        margin-right: 8px; 
+        display: flex; 
+        align-items: center; 
+        cursor: pointer;
+    }
+    .header__menu--profile img {
+        margin-right: 8px; 
+        width: 40px;
+    }
+    .header__menu--profile p {
+        margin: 0 px; 
+        color: white; 
+    }
 </style>
 <body>
-    <header>
-        <img src="imagenes/logo-platzi.png" alt="Prueba de imagen">
+    <header class="header">
+        <img class="header__img" src="imagenes/logo-platzi.png" alt="Prueba de imagen">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="imagenes/user-icon.png" alt="User">
+                <p>Perfil</p> 
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/">Cuenta</a></li>
+                    <li><a href="/">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 </body>
 </html>
