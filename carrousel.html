@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrousel</title>
+</head>
+<style>
+    body {
+        margin: 0px; 
+        padding: 0px; 
+    }
+    .carousel {
+        padding: 30px; 
+        width: 100%; 
+        overflow: scroll;
+        position: relative; 
+    } 
+    .carousel__container {
+        white-space: nowrap; 
+        padding-bottom:  10px; 
+        margin: 70px 0px;
+    }
+    .carousel__item {
+        width: 200px; 
+        height: 250px; 
+        border-radius: 20px; 
+        background-color: aqua;
+        overflow: hidden;
+        margin-right: 10px; 
+        display: inline-block; 
+        cursor: pointer; 
+        transition: 450ms all;
+        transform-origin: center left; 
+    }
+    .carousel__item:hover ~ .carousel__item {
+        transform: translate3d(100px, 0, 0);
+    }
+    .carousel__container:hover .carousel__item {
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carousel__item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+        </div>
+    </section>
+</body>
+</html>
