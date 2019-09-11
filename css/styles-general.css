@@ -138,6 +138,18 @@ body {
 .login__container--register a:hover {
   text-decoration: underline;
 }
+.login__container--iniciar {
+  text-align: center;
+}
+.login__container--iniciar a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+.login__container--iniciar a:hover {
+  text-decoration: underline;
+}
 
 /* Index */
 .main {
@@ -151,6 +163,19 @@ body {
 .main__title {
   color: white;
   font-size: 25px;
+}
+.main__input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 20px;
+  width: 70%;
 }
 
 .categories__title {
@@ -257,7 +282,7 @@ body {
   animation-fill-mode: both;
   animation-iteration-count: infinite;
 }
-.container-fullheight p {
+.container-fullheight__mensaje404 {
   color: white;
   font-size: 25px;
 }
@@ -289,20 +314,6 @@ body {
 }
 .footer a:hover {
   text-decoration: underline;
-}
-
-.input {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid white;
-  border-radius: 25px;
-  color: white;
-  font-family: "Muli", sans-serif;
-  font-size: 16px;
-  height: 50px;
-  margin-bottom: 20px;
-  outline: none;
-  padding: 0px 20px;
-  width: 70%;
 }
 
 ::placeholder {
