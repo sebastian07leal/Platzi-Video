@@ -157,6 +157,38 @@ body {
   opacity: 1;
 }
 
+.container-fullheight {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-fullheight__titulo {
+  margin: 0px;
+  color: white;
+  font-size: 70px;
+  animation-name: pulse;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.container-fullheight p {
+  color: white;
+  font-size: 25px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .footer {
   align-items: center;
   background-color: #8f57fd;
