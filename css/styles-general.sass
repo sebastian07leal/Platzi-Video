@@ -1,11 +1,10 @@
 body
   margin: 0
   font-family: 'Muli', sans-serif
-  background: #8f57fd
+  background: linear-gradient(#21c08b, #AB88FF)
 
 .header
   align-items: center
-  background: #8f57fd
   color: white
   display: flex
   height: 100px
@@ -67,14 +66,18 @@ body
   justify-content: space-around
   flex-direction: column
 
+  &--titulo
+    text-align: center
+
   &--form
     display: flex
     flex-direction: column
 
     label
       font-size: 14px
+      cursor: pointer
     
-    input
+    .input
       background-color: transparent
       border-top: 0px
       border-left: 0px
@@ -86,6 +89,7 @@ body
       padding: 0px 20px
       outline: none
       height: 50px
+      color: white
     
     button
       background-color: rgba(255, 255, 255, 0.1)
@@ -99,6 +103,9 @@ body
       height: 50px
       letter-spacing: 1px
       margin: 10px 0px
+    
+      &:hover
+        border: 2px solid white
   
   &--remember-me
     color: white
@@ -111,8 +118,8 @@ body
       font-size: 14px
       text-decoration: none
     
-    &:hover
-      text-decoration: underline
+      &:hover
+        text-decoration: underline
   
   &--social-media > div
     display: flex
@@ -289,7 +296,6 @@ body
 
 .footer
   align-items: center
-  background-color: #8f57fd
   display: flex
   height: 100px
   width: 100%

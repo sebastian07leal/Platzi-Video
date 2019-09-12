@@ -1,12 +1,11 @@
 body {
   margin: 0;
   font-family: "Muli", sans-serif;
-  background: #8f57fd;
+  background: linear-gradient(#21c08b, #AB88FF);
 }
 
 .header {
   align-items: center;
-  background: #8f57fd;
   color: white;
   display: flex;
   height: 100px;
@@ -69,14 +68,18 @@ body {
   justify-content: space-around;
   flex-direction: column;
 }
+.login__container--titulo {
+  text-align: center;
+}
 .login__container--form {
   display: flex;
   flex-direction: column;
 }
 .login__container--form label {
   font-size: 14px;
+  cursor: pointer;
 }
-.login__container--form input {
+.login__container--form .input {
   background-color: transparent;
   border-top: 0px;
   border-left: 0px;
@@ -88,6 +91,7 @@ body {
   padding: 0px 20px;
   outline: none;
   height: 50px;
+  color: white;
 }
 .login__container--form button {
   background-color: rgba(255, 255, 255, 0.1);
@@ -102,6 +106,9 @@ body {
   letter-spacing: 1px;
   margin: 10px 0px;
 }
+.login__container--form button:hover {
+  border: 2px solid white;
+}
 .login__container--remember-me {
   color: white;
   display: flex;
@@ -113,7 +120,7 @@ body {
   font-size: 14px;
   text-decoration: none;
 }
-.login__container--remember-me:hover {
+.login__container--remember-me a:hover {
   text-decoration: underline;
 }
 .login__container--social-media > div {
@@ -300,7 +307,6 @@ body {
 }
 .footer {
   align-items: center;
-  background-color: #8f57fd;
   display: flex;
   height: 100px;
   width: 100%;
