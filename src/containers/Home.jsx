@@ -7,7 +7,7 @@ import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
 import '../assets/styles/App.sass';
 
-const App = () => (
+const Home = () => (
     <div className="App">
         <Header />
         <Search />
@@ -36,4 +36,4 @@ const App = () => (
     </div>
 );
 
-export default App;
+export default Home;
