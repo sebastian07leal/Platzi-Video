@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => (
     <section className="container-fullheight">
@@ -10,7 +11,11 @@ const Register = () => (
                 <input className="input" type="password" placeholder="Contraseña" />
                 <button>Registrarme</button>
             </form>
-            <p className="login__container--iniciar"><a href="#">Iniciar sesión</a></p>
+            <p className="login__container--iniciar">
+                <Link to="/login">
+                    Iniciar sesión
+                </Link>
+            </p>
         </section>
     </section>
 );
