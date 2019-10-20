@@ -8,7 +8,7 @@ import App from './routes/App';
 const initialState = {
   "user": {},
   "playing": {},
-  "mylist": [],
+  "myList": [],
   "trends": [
     {
       "id": 2,
@@ -171,7 +171,7 @@ const initialState = {
   ]  
 }
 
-const store = createStore(reducer, inicialState);
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,35 +1,47 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import '../assets/styles/App.sass';
 
-const Home = () => (
+const Home = ({myList, trends, originals}) => (
     <>
         <Search />
-        <Categories title="Mi lista">
-            <Carousel>
-                <CarouselItem />
-                <CarouselItem />
-                <CarouselItem />
-                <CarouselItem />
-            </Carousel>
-        </Categories>
-
+        {myList.length > 0 &&
+            <Categories title="Mi lista">
+                <Carousel>
+                    {myList.map(item => 
+                        <CarouselItem key={item.id} {...item} />
+                    )}
+                </Carousel>
+            </Categories>
+        }
         <Categories title="Tendencias">
             <Carousel>
-                <CarouselItem />
-                <CarouselItem />
+                {trends.map(item => 
+                    <CarouselItem key={item.id} {...item} />
+                )}
             </Carousel>
         </Categories>
 
         <Categories title="Originales de Platzi Video">
             <Carousel>
-                <CarouselItem />
+                {originals.map(item => 
+                    <CarouselItem key={item.id} {...item} />
+                )}
             </Carousel>
         </Categories>
     </>
 );
 
-export default Home;
+const mapStateToProps = state => {
+    return {
+        myList: state.myList,
+        trends: state.trends,
+        originals: state.originals
+    };
+};
+
+export default connect(mapStateToProps, null)(Home);
