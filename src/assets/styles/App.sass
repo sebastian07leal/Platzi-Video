@@ -1,0 +1,27 @@
+@import "./Vars.sass"
+@import "./Media.sass"
+
+body
+  margin: 0
+  font-family: $theme-font
+  background: $main-color
+
+.container-fullheight
+  min-height: calc( 100vh - 200px ) 
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  &__titulo
+    margin: 0px
+    color: white
+    font-size: 70px
+    animation-name: pulse
+    animation-duration: 2.5s
+    animation-fill-mode: both
+    animation-iteration-count: infinite
+  
+  &__mensaje404
+    color: white
+    font-size: 25px
